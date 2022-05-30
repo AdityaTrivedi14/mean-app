@@ -1,7 +1,5 @@
-
-  <textarea class="text" placeholder="Type Your message" [(ngModel)]="enteredValue"></textarea>
-  <button (click)="onAddClick()">Upload Image</button>
-
-
+<input type="text" [(ngModel)]="enteredTitle"/>
+<textarea class="text" placeholder="Type Your message" [(ngModel)]="enteredContent"></textarea>
+<button class="btn btn-primary" (click)="onAddPost()">Save Post</button>
 <hr>
-<p>{{ newPost }}</p>
+<!-- <p>{{ newPost }}</p> -->

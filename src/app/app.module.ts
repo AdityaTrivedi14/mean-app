@@ -7,18 +7,22 @@ import { AppComponent } from './app.component';
 import { PostCreateComponent } from './components/post-create/post-create.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeadersComponent } from './components/headers/headers.component';
+import { PostListsComponent } from './components/post-lists/post-lists.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostCreateComponent,
-    HeadersComponent
+    HeadersComponent,
+    PostListsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    NgbModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

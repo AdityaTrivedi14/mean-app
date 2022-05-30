@@ -1,0 +1,27 @@
+<!--
+<div class="accordion accordion-flush" id="accordionExample">
+  <div class="accordion-item" *ngFor="let post of posts;let i = index; trackBy: trackByFunc;">
+    <h2 class="accordion-header" id="headingOne">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+        aria-expanded="true" aria-controls="collapseOne">
+        {{ post.title }}
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+      data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>{{post.content}}</strong>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<ng-container *ngIf="posts.length > 0">
+  <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" *ngFor="let post of posts" >
+    <ngb-panel title="{{post.title}">
+      <ng-template ngbPanelContent>{{post}}</ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+</ng-container>
+<p class="info-text" *ngIf="posts.length <=0">No post Added Yet!</p>
+
