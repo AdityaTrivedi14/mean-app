@@ -18,8 +18,8 @@
 
 <ng-container *ngIf="posts.length > 0">
   <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" *ngFor="let post of posts" >
-    <ngb-panel title="{{post.title}">
-      <ng-template ngbPanelContent>{{post}}</ng-template>
+    <ngb-panel title="{{ post.title }}">
+      <ng-template ngbPanelContent>{{ post.content }}</ng-template>
     </ngb-panel>
   </ngb-accordion>
 </ng-container>
