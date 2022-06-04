@@ -1,5 +1,26 @@
-<input type="text" [(ngModel)]="enteredTitle"/>
-<textarea class="text" [(ngModel)]="enteredContent"></textarea>
-<button class="btn btn-primary" (click)="onAddPost()">Save Post</button>
-<hr>
-<!-- <p>{{ newPost }}</p> -->
+
+  <form class="needs-validation" (submit)="onAddPost(postForm)" #postForm="ngForm" novalidate>
+    <div class="form-floating mb-3">
+      <input class="form-control" id="floatingTitle" type="text" name="title" ngModel required />
+      <label for="validationCustom01 floatingTitle" class="form-label">Post Title</label>
+      <div class="invalid-feedback">
+        Please provide a valid title
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="form-floating mb-3">
+      <textarea id="floatingContent" class="text form-control" name="content" ngModel required></textarea>
+      <label for="validationCustom02 floatingContent" class="form-label">Post Content</label>
+      <div class="invalid-feedback">
+        Please provide a valid content
+      </div>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <button class="btn btn-primary mb-3" type="submit">Save Post</button>
+  </form>
+  <!-- <p>{{ newPost }}</p> -->
+
