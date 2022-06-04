@@ -1,7 +1,9 @@
 <app-headers></app-headers>
 <main>
   <div class="container">
-    <app-post-create (postCreated)="onPostAdded($event)"></app-post-create>
-    <app-post-lists [posts]="storedPosts"></app-post-lists>
+    <app-post-create></app-post-create>
+    <app-post-lists></app-post-lists>
+    <!-- <app-post-create (postCreated)="onPostAdded($event)"></app-post-create>
+    <app-post-lists [posts]="storedPosts"></app-post-lists> -->
   </div>
 </main>
